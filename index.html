@@ -4,9 +4,141 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Shoppy Cart</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border: 1px solid red;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    #app {
+      max-width: 1000px;
+    }
+
+    header {
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main {
+      padding: 20px 0;
+      display: grid;
+      height: calc(100% - 100px);
+      grid-template-columns: 1fr 150px;
+      grid-gap: 60px;
+    }
+
+    .catalog {
+      margin-left: 80px;
+    }
+
+    .catalog__product-list {
+      list-style-type: none;
+    }
+
+    .sidebar {
+      margin-right: 20px;
+    }
+
+    .cart-preview {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      height: 80px;
+    }
+
+    .product {
+      display: grid;
+      grid-template-columns: 3fr 1fr 1fr;
+    }
+
+    .product__name {
+      grid-row: 1 / 2;
+      padding: 5px;
+    }
+
+    .product__description {
+      order: 1;
+      padding: 5px;
+    }
+
+    .product__price {
+      grid-row: 1 / 3;
+      padding: 5px;
+      text-align: center;
+    }
+
+  </style>
 </head>
 <body>
+  <div id="app">
 
+    <header>
+      <h1>Things You Can Buy With Money</h1>
+    </header>
+    <main>
+      <section class="catalog">
+        <ul class="catalog__product-list">
+          <li>
+            <article class="product">
+              <h2 class="product__name">Product name</h2>
+              <p class="product__description">Description, it could be as long as a short paragraph, maybe even a long paragraph, can anyone know for sure how long the description will be???</p>
+              <p class="product__price">$6.66</p>
+              <button class="product__button">Add to cart</button>
+            </article>
+          </li>
+          <li>
+            <article class="product">
+              <h2 class="product__name">Product name</h2>
+              <p class="product__description">Description, it could be as long as a short paragraph, maybe even a long paragraph, can anyone know for sure how long the description will be???</p>
+              <p class="product__price">$6.66</p>
+              <button class="product__button">Add to cart</button>
+            </article>
+          </li>
+          <li>
+            <article class="product">
+              <h2 class="product__name">Product name</h2>
+              <p class="product__description">Description, it could be as long as a short paragraph, maybe even a long paragraph, can anyone know for sure how long the description will be???</p>
+              <p class="product__price">$6.66</p>
+              <button class="product__button">Add to cart</button>
+            </article>
+          </li>
+          <li>
+            <article class="product">
+              <h2 class="product__name">Product name</h2>
+              <p class="product__description">Description, it could be as long as a short paragraph, maybe even a long paragraph, can anyone know for sure how long the description will be???</p>
+              <p class="product__price">$6.66</p>
+              <button class="product__button">Add to cart</button>
+            </article>
+          </li>
+          <li>
+            <article class="product">
+              <h2 class="product__name">Product type</h2>
+              <p class="product__description">Description, it could be as long as a short paragraph, maybe even a long paragraph, can anyone know for sure how long the description will be???</p>
+              <p class="product__price">$6.66</p>
+              <button class="product__button">Add to cart</button>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <aside class="sidebar">
+        <div class="cart-preview">
+          <button>View cart</button>
+          <p>(# items)</p>
+        </div>
+      </aside>
+    </main>
+  </div>
 </body>
 </html>
