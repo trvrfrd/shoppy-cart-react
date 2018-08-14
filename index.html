@@ -118,6 +118,9 @@
       padding: 5px;
     }
 
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -173,13 +176,13 @@
       </section>
       <aside class="sidebar">
         <div class="cart-preview">
-          <button>View cart</button>
+          <button class="js-view-cart">View cart</button>
           <p>(# items)</p>
         </div>
       </aside>
     </main>
 
-    <div class="modal">
+    <div class="modal hidden">
       <div class="cart">
         <h2 class="cart__headline">Your Cart</h2>
         <table class="cart__table">
@@ -203,10 +206,22 @@
         <p>Total: $X.XX</p>
         <div>
           <button>Clear</button>
-          <button>Close</button>
+          <button class="js-close-cart">Close</button>
         </div>
       </div>
     </div>
   </div>
+  <script>
+    // const app = document.querySelector('#app');
+    const modal = document.querySelector('.modal');
+    const viewCart = document.querySelector('.js-view-cart');
+    const closeCart = document.querySelector('.js-close-cart');
+
+    viewCart.addEventListener('click', () => modal.classList.remove('hidden'));
+    closeCart.addEventListener('click', () => modal.classList.add('hidden'));
+    document.body.addEventListener('keydown', e => {
+      if (e.keyCode === 27) modal.classList.add('hidden');
+    });
+  </script>
 </body>
 </html>
