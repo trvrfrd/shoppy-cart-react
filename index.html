@@ -81,6 +81,43 @@
       text-align: center;
     }
 
+    .modal {
+      align-items: center;
+      background: #fff;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      z-index: 10;
+    }
+
+    .cart {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: -10%;
+      min-height: 50%;
+      min-width: 50%;
+    }
+
+    .cart__headline {
+      text-align: center;
+    }
+
+    .cart__table {
+      align-self: center;
+      text-align: left;
+      min-height: 25%;
+      min-width: 90%;
+    }
+
+    .cart__table th, .cart__table td {
+      padding: 5px;
+    }
+
   </style>
 </head>
 <body>
@@ -141,6 +178,35 @@
         </div>
       </aside>
     </main>
+
+    <div class="modal">
+      <div class="cart">
+        <h2 class="cart__headline">Your Cart</h2>
+        <table class="cart__table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Price</th>
+              <th>Qty</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dark</td>
+              <td>$1.50</td>
+              <td>3</td>
+              <td><button>remove</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Total: $X.XX</p>
+        <div>
+          <button>Clear</button>
+          <button>Close</button>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
