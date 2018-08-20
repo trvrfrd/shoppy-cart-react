@@ -41,7 +41,10 @@ export default class Cart extends Component {
     return (
       <div>
         <h1>Your Cart</h1>
-        <CartTable items={items} />
+        <CartTable
+          items={items}
+          onRemoveItem={this.removeItemAt}
+        />
         <CartTotal items={items} />
         <CartControls
           onClear={this.clearItems}

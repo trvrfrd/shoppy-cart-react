@@ -132,3 +132,15 @@ describe('instance methods', () => {
     expect(wrapper.state('items')).toEqual([]);
   });
 });
+
+describe('integrations', () => {
+  it('removes an item from Cart with the Remove button', () => {
+    const wrapper = mount(<Cart items={fakeItems} />);
+    const removeFirst = wrapper.find('[data-test-name="remove-item"]').at(0);
+    const expected = fakeItems.slice(1);
+
+    removeFirst.simulate('click');
+
+    expect(wrapper.state('items')).toEqual(expected);
+  });
+});
