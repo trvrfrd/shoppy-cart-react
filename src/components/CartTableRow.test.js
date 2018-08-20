@@ -36,5 +36,5 @@ it('calls onRemoveItem prop when remove button clicked', () => {
 
   wrapper.find('button').simulate('click');
 
-  expect(handler).toHaveBeenCalledTimes(1);
+  expect(handler).toHaveBeenCalled();
 });

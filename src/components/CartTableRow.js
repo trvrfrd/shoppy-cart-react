@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatUSD } from '../utils';
 
 export default function CartTableRow({
   item: { type, price, quantity },
@@ -14,8 +15,4 @@ export default function CartTableRow({
       </td>
     </tr>
   );
-}
-
-function formatUSD(float) {
-  return `$${float.toFixed(2)}`;
 }
