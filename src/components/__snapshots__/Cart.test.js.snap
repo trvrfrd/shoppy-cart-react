@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI and rendering matches snapshot 1`] = `
+<div>
+  <h1>
+    Your Cart
+  </h1>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Item
+        </th>
+        <th>
+          Price
+        </th>
+        <th>
+          Qty
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          a
+        </td>
+        <td>
+          $1.00
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          <button
+            onClick={[Function]}
+          >
+            Remove
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          b
+        </td>
+        <td>
+          $1.50
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          <button
+            onClick={[Function]}
+          >
+            Remove
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          c
+        </td>
+        <td>
+          $2.00
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          <button
+            onClick={[Function]}
+          >
+            Remove
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    Total: 
+    $10.00
+  </p>
+  <div>
+    <button
+      onClick={[Function]}
+    >
+      Clear
+    </button>
+    <button>
+      Close
+    </button>
+  </div>
+</div>
+`;
