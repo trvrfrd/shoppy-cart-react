@@ -85,9 +85,7 @@ exports[`UI and rendering matches snapshot 1`] = `
     $10.00
   </p>
   <div>
-    <button
-      onClick={[Function]}
-    >
+    <button>
       Clear
     </button>
     <button>

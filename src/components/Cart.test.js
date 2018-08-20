@@ -21,16 +21,6 @@ const fakeItems = [
   }
 ];
 
-it('can set initial state based on items prop', () => {
-  const wrapper = mount(<Cart items={fakeItems} />);
-  expect(wrapper.state('items')).toEqual(fakeItems);
-});
-
-it('creates new items array when setting initial state from props', () => {
-  const wrapper = mount(<Cart items={fakeItems} />);
-  expect(wrapper.state('items')).not.toBe(fakeItems);
-});
-
 describe('UI and rendering', () => {
 
   it('matches snapshot', () => {
@@ -38,20 +28,18 @@ describe('UI and rendering', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('renders a CartTable with state.items as prop', () => {
-    const wrapper = mount(<Cart />);
-    wrapper.setState({ items: fakeItems });
+  it('renders a CartTable with items as prop', () => {
+    const wrapper = mount(<Cart items={fakeItems} />);
     const table = wrapper.find('CartTable');
 
-    expect(table.prop('items')).toBe(fakeItems);
+    expect(table.prop('items')).toEqual(fakeItems);
   });
 
-  it('renders a CartTotal with state.items as prop', () => {
-    const wrapper = mount(<Cart />);
-    wrapper.setState({ items: fakeItems });
+  it('renders a CartTotal with items as prop', () => {
+    const wrapper = mount(<Cart items={fakeItems} />);
     const table = wrapper.find('CartTotal');
 
-    expect(table.prop('items')).toBe(fakeItems);
+    expect(table.prop('items')).toEqual(fakeItems);
   });
 
   describe('controls', () => {
@@ -63,14 +51,15 @@ describe('UI and rendering', () => {
       expect(controls.length).toBe(1);
     });
 
-    it('has a Clear button that removes items from state', () => {
-      const wrapper = mount(<Cart items={fakeItems} />);
+    it('has a Clear button that calls onClear prop', () => {
+      const handler = jest.fn();
+      const wrapper = mount(<Cart items={fakeItems} onClear={handler} />);
       const controls = wrapper.find('CartControls');
       const clear = controls.find('button').at(0);
 
       clear.simulate('click');
 
-      expect(wrapper.state('items')).toEqual([]);
+      expect(handler).toHaveBeenCalled();
     });
 
     it('has a Close button that calls onClose prop', () => {
@@ -83,64 +72,16 @@ describe('UI and rendering', () => {
 
       expect(handler).toHaveBeenCalled();
     });
-  });
-});
 
+    it('calls onRemoveItem with correct index when an item is removed', () => {
+      const handler = jest.fn();
+      const index = 0;
+      const wrapper = mount(<Cart items={fakeItems} onRemoveItem={handler} />);
+      const removeFirst = wrapper.find('[data-test-name="remove-item"]').at(index);
 
-describe('instance methods', () => {
+      removeFirst.simulate('click');
 
-  let wrapper;
-  beforeEach(() => wrapper = mount(<Cart items={fakeItems} />));
-
-  describe('.addItem()', () => {
-
-    it('adds a new item to state with quantity: 1', () => {
-      const newItem = {
-        type: 'd',
-        price: 3.15
-      };
-      const expected = fakeItems.concat(Object.assign({ quantity: 1 }, newItem));
-
-      wrapper.instance().addItem(newItem);
-
-      expect(wrapper.state('items')).toEqual(expected);
+      expect(handler).toHaveBeenCalledWith(index);
     });
-
-    it('increments quantity when adding an existing item to state', () => {
-      const existingItem = Object.assign({}, fakeItems[0]);
-      existingItem.quantity += 1;
-      const expected = [existingItem, ...fakeItems.slice(1)];
-
-      wrapper.instance().addItem(existingItem);
-
-      expect(wrapper.state('items')).toEqual(expected);
-    });
-  });
-
-  it('removes an item from state by index with .removeItemAt()', () => {
-    const index = 1;
-    const expected = [...fakeItems.slice(0, index), ...fakeItems.slice(index + 1)];
-
-    wrapper.instance().removeItemAt(index);
-
-    expect(wrapper.state('items')).toEqual(expected);
-  });
-
-  it('clears all items', () => {
-    wrapper.instance().clearItems();
-
-    expect(wrapper.state('items')).toEqual([]);
-  });
-});
-
-describe('integrations', () => {
-  it('removes an item from Cart with the Remove button', () => {
-    const wrapper = mount(<Cart items={fakeItems} />);
-    const removeFirst = wrapper.find('[data-test-name="remove-item"]').at(0);
-    const expected = fakeItems.slice(1);
-
-    removeFirst.simulate('click');
-
-    expect(wrapper.state('items')).toEqual(expected);
   });
 });
