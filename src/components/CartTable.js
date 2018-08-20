@@ -1,7 +1,7 @@
 import React from 'react';
 import CartTableRow from './CartTableRow';
 
-export default function CartTable({ items = [] }) {
+export default function CartTable({ items = [], onRemoveItem }) {
   return (
     <table>
       <thead>
@@ -13,7 +13,13 @@ export default function CartTable({ items = [] }) {
         </tr>
       </thead>
       <tbody>
-        {items.map(item => <CartTableRow key={item.type} item={item} />)}
+        {items.map((item, idx) =>
+          <CartTableRow
+            key={item.type}
+            item={item}
+            onRemoveItem={() => onRemoveItem(idx)}
+          />)
+        }
       </tbody>
     </table>
   );
