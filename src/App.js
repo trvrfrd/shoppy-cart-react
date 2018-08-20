@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 
-import CartTable from './components/CartTable';
-import CartTotal from './components/CartTotal';
-import CartControls from './components/CartControls';
+import Cart from './components/Cart';
 
 class App extends Component {
   state = {
-    items: [
+    cart: [
       {
         type: 'a',
         quantity: 1,
@@ -23,31 +21,54 @@ class App extends Component {
         quantity: 3,
         price: 2.00
       }
-    ]
+    ],
+    inventory: []
   }
 
-  removeItemAt = (idx) => {
-    let { items } = this.state;
-    items = [
-      ...items.slice(0, idx),
-      ...items.slice(idx + 1)
-    ]
-    this.setState({ items });
+  addItemToCart = newItem => {
+    this.setState(({ cart }) => {
+      const existingIdx = cart.findIndex(item => item.type === newItem.type);
+      if (existingIdx !== -1) {
+        cart = [...cart];
+        cart[existingIdx].quantity += 1;
+      } else {
+        newItem = Object.assign({ quantity: 1 }, newItem);
+        cart.push(newItem);
+      }
+
+      return { cart };
+    });
+  }
+
+  removeItemFromCartAt = idx => {
+    this.setState(({ cart }) => {
+      cart = [...cart];
+      cart.splice(idx, 1);
+      return { cart };
+    });
+  }
+
+  clearCart = () => this.setState({ items: [] });
+
+  addRandomItem = () => {
+    const letters = 'abcdefghijklmnopqrstuvwxyz';
+    const randomChar = letters[Math.floor(Math.random() * 26)];
+    const item = {
+      type: randomChar,
+      price: Number((Math.random() * 10).toFixed(2))
+    }
+    this.addItemToCart(item);
   }
 
   render() {
     return (
       <div>
-        <h1>Your Cart</h1>
-        <CartTable
-          items={this.state.items}
-          onRemoveItem={this.removeItemAt}
+        <Cart
+          items={this.state.cart}
+          onClear={this.clearCart}
+          onRemoveItem={this.removeItemFromCartAt}
         />
-        <CartTotal items={this.state.items} />
-        <CartControls
-          onClear={() => this.setState({ items: [] })}
-          onClose={() => console.log('close')}
-        />
+        <button onClick={this.addRandomItem}>add random</button>
       </div>
     )
   }
