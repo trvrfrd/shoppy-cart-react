@@ -1,4 +1,8 @@
-import { formatUSD, titleCase } from './utils';
+import {
+  formatUSD,
+  titleCase,
+  capitalize
+} from './utils';
 
 describe('formatUSD()', () => {
   it('correctly formats a float', () => {
@@ -28,10 +32,11 @@ describe('formatUSD()', () => {
   });
 
   it('throws a TypeError if argument is not a number', () => {
-    const n = 'a word';
+    const n = 'not a number';
     expect(() => formatUSD(n)).toThrow(TypeError);
   });
 });
+
 
 describe('titleCase()', () => {
   it('capitalizes a single word', () => {
@@ -40,7 +45,20 @@ describe('titleCase()', () => {
   });
 
   it('capitalizes each word in a phrase', () => {
-    const word = 'hot buttered buns';
-    expect(titleCase(word)).toBe('Hot Buttered Buns');
+    const phrase = 'hot buttered buns';
+    expect(titleCase(phrase)).toBe('Hot Buttered Buns');
+  });
+});
+
+
+describe('capitalize()', () => {
+  it('capitalizes a single word', () => {
+    const word = 'buns';
+    expect(capitalize(word)).toBe('Buns');
+  });
+
+  it('capitalizes only the first word in a phrase', () => {
+    const phrase = 'hot buttered buns';
+    expect(capitalize(phrase)).toBe('Hot buttered buns');
   });
 });

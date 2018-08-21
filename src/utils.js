@@ -9,6 +9,6 @@ export function titleCase(str) {
   return str.split(' ').map(capitalize).join(' ');
 }
 
-export function capitalize(word) {
-  return word[0].toUpperCase() + word.substring(1);
+export function capitalize(str) {
+  return str[0].toUpperCase() + str.substring(1);
 }

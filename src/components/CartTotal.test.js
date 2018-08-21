@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CartTotal from './CartTotal.js';
+import CartTotal from './CartTotal';
 
 it('displays properly formatted total for cart', () => {
   const items = [

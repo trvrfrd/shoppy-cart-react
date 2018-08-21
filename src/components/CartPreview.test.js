@@ -4,7 +4,7 @@ import CartPreview from './CartPreview';
 
 import { fakeItems } from '../../test/mocks';
 
-it('has a View Cart button that calls onView callback', () => {
+it('has a View Cart button that calls onView prop', () => {
   const handler = jest.fn();
   const wrapper = mount(<CartPreview onView={handler} />);
 
