@@ -9,6 +9,16 @@ it('renders a Product component for each product', () => {
   expect(wrapper.find('Product').length).toBe(fakeItems.length);
 });
 
+it('renders no Product components when passed empty inventory', () => {
+  const wrapper = mount(<Catalog inventory={[]} />);
+  expect(wrapper.find('Product').length).toBe(0);
+});
+
+it('renders no Product components when passed no inventory', () => {
+  const wrapper = mount(<Catalog />);
+  expect(wrapper.find('Product').length).toBe(0);
+});
+
 it('calls onAddProductToCart prop with correct product', () => {
   const handler = jest.fn();
   const product = fakeItems[0];

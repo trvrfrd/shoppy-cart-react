@@ -1,7 +1,7 @@
 import React from 'react';
 import Product from './Product';
 
-export default function Catalog({ inventory, onAddProductToCart }) {
+export default function Catalog({ inventory = [], onAddProductToCart }) {
   return (
     <ul>
       {inventory.map(product =>
