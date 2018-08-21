@@ -13,9 +13,10 @@ it('has a View Cart button that calls onView prop', () => {
   expect(handler).toHaveBeenCalled();
 });
 
-it('displays count of items in cart', () => {
+it('displays total count of items in cart', () => {
   const wrapper = mount(<CartPreview items={fakeItems} />);
-  const expected = `(${fakeItems.length} items)`
+  const totalCount = fakeItems.reduce((t, i) => t + i.quantity, 0);
+  const expected = `(${totalCount} items)`
 
   expect(wrapper.text()).toMatch(expected);
 });
