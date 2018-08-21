@@ -32,7 +32,7 @@ class App extends Component {
         cart = [...cart];
         cart[existingIdx].quantity += 1;
       } else {
-        newItem = Object.assign({ quantity: 1 }, newItem);
+        newItem = Object.assign({}, newItem, { quantity: 1 });
         cart.push(newItem);
       }
 
@@ -48,7 +48,7 @@ class App extends Component {
     });
   }
 
-  clearCart = () => this.setState({ items: [] });
+  clearCart = () => this.setState({ cart: [] });
 
   addRandomItem = () => {
     const letters = 'abcdefghijklmnopqrstuvwxyz';
@@ -63,12 +63,12 @@ class App extends Component {
   render() {
     return (
       <div>
+        <button onClick={this.addRandomItem}>add random</button>
         <Cart
           items={this.state.cart}
           onClear={this.clearCart}
           onRemoveItem={this.removeItemFromCartAt}
         />
-        <button onClick={this.addRandomItem}>add random</button>
       </div>
     )
   }
