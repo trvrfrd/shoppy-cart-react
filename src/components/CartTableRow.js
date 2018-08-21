@@ -1,5 +1,5 @@
 import React from 'react';
-import { formatUSD } from '../utils';
+import { formatUSD, titleCase } from '../utils';
 
 export default function CartTableRow({
   item: { type, price, quantity },
@@ -7,7 +7,7 @@ export default function CartTableRow({
 }) {
   return (
     <tr>
-      <td>{type}</td>
+      <td>{titleCase(type)}</td>
       <td>{formatUSD(price)}</td>
       <td>{quantity}</td>
       <td>

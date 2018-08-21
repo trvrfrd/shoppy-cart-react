@@ -2,24 +2,24 @@ import React from 'react';
 import { mount } from 'enzyme';
 import CartTableRow from './CartTableRow';
 
-const item = {
-  type: 'a thing',
-  price: 1.50,
-  quantity: 2
-};
+import { fakeItems } from '../../test/mocks';
+const item = fakeItems[0];
 
-it('displays item type, price, and quantity', () => {
+it('displays item quantity', () => {
   const wrapper = mount(<CartTableRow item={item} />);
-  const text = wrapper.text();
-
-  expect(text).toMatch(item.type);
-  expect(text).toMatch(item.price.toString());
-  expect(text).toMatch(item.quantity.toString());
+  expect(wrapper.text()).toMatch(item.quantity.toString());
 });
 
-it('formats price properly, with leading $ and 2 decimal places', () => {
+it('displays properly formatted price', () => {
   const wrapper = mount(<CartTableRow item={item} />);
   expect(wrapper.text()).toMatch(`$${item.price.toFixed(2)}`);
+});
+
+it('displays item type in title case', () => {
+  const newItem = Object.assign({}, item, { type: 'a few words' });
+  const wrapper = mount(<CartTableRow item={newItem} />);
+
+  expect(wrapper.text()).toMatch('A Few Words');
 });
 
 it('has a button to remove the item', () => {

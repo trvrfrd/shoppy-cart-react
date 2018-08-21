@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import CartTable from './CartTable';
 import CartTotal from './CartTotal';
 import CartControls from './CartControls';
 
-export default function Cart({ items, onClear, onClose, onRemoveItem }) {
+export default function Cart({ items = [], onClear, onClose, onRemoveItem }) {
   return (
     <div>
       <h1>Your Cart</h1>
-      <CartTable
-        items={items}
-        onRemoveItem={onRemoveItem}
-      />
-      <CartTotal items={items} />
+      {items.length ?
+        <Fragment>
+          <CartTable
+            items={items}
+            onRemoveItem={onRemoveItem}
+          />
+          <CartTotal items={items} />
+        </Fragment>
+        : <p>Your cart is empty.</p>
+      }
       <CartControls
         onClear={onClear}
         onClose={onClose}

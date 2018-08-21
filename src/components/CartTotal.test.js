@@ -14,3 +14,15 @@ it('displays properly formatted total for cart', () => {
 
   expect(wrapper.text()).toMatch(formattedTotal);
 });
+
+it('displays total of $0.00 for an empty items list', () => {
+  const items = [];
+  const wrapper = shallow(<CartTotal items={items} />);
+
+  expect(wrapper.text()).toMatch('Total: $0.00');
+});
+
+if('defaults to total of $0.00 when no items provided', () => {
+  const wrapper = shallow(<CartTotal />);
+  expect(wrapper.text()).toMatch('Total: $0.00');
+});

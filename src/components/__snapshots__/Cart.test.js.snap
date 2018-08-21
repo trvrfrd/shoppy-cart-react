@@ -23,7 +23,7 @@ exports[`UI and rendering matches snapshot 1`] = `
     <tbody>
       <tr>
         <td>
-          a
+          A
         </td>
         <td>
           $1.00
@@ -42,7 +42,7 @@ exports[`UI and rendering matches snapshot 1`] = `
       </tr>
       <tr>
         <td>
-          b
+          B
         </td>
         <td>
           $1.50
@@ -61,7 +61,7 @@ exports[`UI and rendering matches snapshot 1`] = `
       </tr>
       <tr>
         <td>
-          c
+          C
         </td>
         <td>
           $2.00

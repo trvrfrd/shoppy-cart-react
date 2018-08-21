@@ -3,23 +3,7 @@ import { mount } from 'enzyme';
 import TestRenderer from 'react-test-renderer';
 import Cart from './Cart';
 
-const fakeItems = [
-  {
-    type: 'a',
-    quantity: 1,
-    price: 1.00
-  },
-  {
-    type: 'b',
-    quantity: 2,
-    price: 1.50
-  },
-  {
-    type: 'c',
-    quantity: 3,
-    price: 2.00
-  }
-];
+import { fakeItems } from '../../test/mocks';
 
 describe('UI and rendering', () => {
 
@@ -40,6 +24,22 @@ describe('UI and rendering', () => {
     const table = wrapper.find('CartTotal');
 
     expect(table.prop('items')).toEqual(fakeItems);
+  });
+
+  it('displays an empty cart message when empty items list provided', () => {
+    const wrapper = mount(<Cart items={[]} />);
+
+    expect(wrapper.find('CartTable').length).toBe(0);
+    expect(wrapper.find('CartTotal').length).toBe(0);
+    expect(wrapper.text()).toMatch('Your cart is empty.');
+  });
+
+  it('displays an empty cart message when no items list provided', () => {
+    const wrapper = mount(<Cart />);
+
+    expect(wrapper.find('CartTable').length).toBe(0);
+    expect(wrapper.find('CartTotal').length).toBe(0);
+    expect(wrapper.text()).toMatch('Your cart is empty.');
   });
 
   describe('controls', () => {
