@@ -5,7 +5,7 @@ export default function Catalog({ inventory, onAddProductToCart }) {
   return (
     <ul>
       {inventory.map(product =>
-        <li key={product.type}>
+        <li key={product.id}>
           <Product product={product} onAddToCart={onAddProductToCart} />
         </li>
       )}

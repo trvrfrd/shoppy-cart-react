@@ -15,7 +15,7 @@ export default function CartTable({ items = [], onRemoveItem }) {
       <tbody>
         {items.map((item, idx) =>
           <CartTableRow
-            key={item.type}
+            key={item.id}
             item={item}
             onRemoveItem={() => onRemoveItem(idx)}
           />)
