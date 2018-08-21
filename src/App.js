@@ -1,28 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { hot } from 'react-hot-loader';
 
+import Catalog from './components/Catalog';
 import Cart from './components/Cart';
+import CartPreview from './components/CartPreview';
+
+// import './App.css';
 
 class App extends Component {
   state = {
-    cart: [
-      {
-        type: 'a',
-        quantity: 1,
-        price: 1.00
-      },
-      {
-        type: 'b',
-        quantity: 2,
-        price: 1.50
-      },
-      {
-        type: 'c',
-        quantity: 3,
-        price: 2.00
-      }
-    ],
-    inventory: []
+    cart: [],
+    inventory: [],
+    showCart: false
+  }
+
+  componentDidMount() {
+    import('./inventory.json')
+      .then(inventory => this.setState({ inventory: inventory.cakes }));
   }
 
   addItemToCart = newItem => {
@@ -50,6 +44,9 @@ class App extends Component {
 
   clearCart = () => this.setState({ cart: [] });
 
+  showCart = () => this.setState({ showCart: true });
+  hideCart = () => this.setState({ showCart: false });
+
   addRandomItem = () => {
     const letters = 'abcdefghijklmnopqrstuvwxyz';
     const randomChar = letters[Math.floor(Math.random() * 26)];
@@ -62,14 +59,32 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.addRandomItem}>add random</button>
-        <Cart
-          items={this.state.cart}
-          onClear={this.clearCart}
-          onRemoveItem={this.removeItemFromCartAt}
-        />
-      </div>
+      <Fragment>
+        <header>
+          <h1>Let Them Eat Cake</h1>
+        </header>
+        <main>
+          <Catalog
+            className="catalog"
+            inventory={this.state.inventory}
+            onAddProductToCart={this.addItemToCart}
+          />
+        </main>
+        <aside className="sidebar">
+          <CartPreview
+            items={this.state.cart}
+            onView={this.showCart}
+          />
+        </aside>
+        <div style={{ display: this.state.showCart ? 'inherit' : 'none' }}>
+          <Cart
+            items={this.state.cart}
+            onClear={this.clearCart}
+            onRemoveItem={this.removeItemFromCartAt}
+            onClose={this.hideCart}
+          />
+        </div>
+      </Fragment>
     )
   }
 }

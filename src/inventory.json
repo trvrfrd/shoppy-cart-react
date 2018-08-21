@@ -1,0 +1,28 @@
+{
+  "cakes" : [
+    {
+      "description": "You won't know which way is up! A very disorienting and overall unpleasant experience.",
+      "id": 1,
+      "type": "pineapple upside-down cake",
+      "price": 1.50
+    },
+    {
+      "description": "Komm, süßer Tod!",
+      "id": 2,
+      "type": "schwarzwälder kirschtorte",
+      "price": 2.50
+    },
+    {
+      "description": "Doesn't look that short to me... the strawberry part I totally get, though.",
+      "id": 3,
+      "type": "strawberry shortcake",
+      "price": 0.50
+    },
+    {
+      "description": "Like most things in life, I only know what this is from The Simpsons.",
+      "id": 4,
+      "type": "lady baltimore cake",
+      "price": 1
+    }
+  ]
+}
