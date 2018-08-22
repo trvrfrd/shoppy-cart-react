@@ -1,0 +1,7 @@
+:local(.wrapper) {
+  margin-left: 80px;
+}
+
+:local(.list) {
+  list-style-type: none;
+}

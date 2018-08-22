@@ -1,0 +1,10 @@
+:local(.table) {
+  align-self: center;
+  text-align: left;
+  min-height: 25%;
+  min-width: 90%;
+}
+
+:local(.cell) {
+  padding: 5px;
+}

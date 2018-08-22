@@ -1,0 +1,9 @@
+:local(.wrapper) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: sticky;
+  text-align: center;
+  top: 20px;
+  height: 80px;
+}

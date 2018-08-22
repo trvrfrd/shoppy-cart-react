@@ -1,13 +1,25 @@
 import React from 'react';
 import { formatUSD, titleCase, capitalize } from '../utils';
 
+import styles from './Product.css';
+
+console.log(styles);
+
 export default function Product({ product, onAddToCart }) {
   return (
-    <article>
-      <h2>{titleCase(product.type)}</h2>
-      <p>{capitalize(product.description)}</p>
-      <p>{formatUSD(product.price)}</p>
-      <button onClick={() => onAddToCart(product)}>Add to cart</button>
+    <article className={styles.product}>
+      <h2 className={styles.name}>
+        {titleCase(product.type)}
+      </h2>
+      <p className={styles.description}>
+        {capitalize(product.description)}
+      </p>
+      <p className={styles.price}>
+        {formatUSD(product.price)}
+      </p>
+      <button onClick={() => onAddToCart(product)}>
+        Add to cart
+      </button>
     </article>
   )
 }

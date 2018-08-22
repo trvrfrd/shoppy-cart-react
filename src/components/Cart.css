@@ -1,0 +1,12 @@
+:local(.cart) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -10%;
+  min-height: 50%;
+  min-width: 50%;
+}
+
+:local(.headline) {
+  text-align: center;
+}

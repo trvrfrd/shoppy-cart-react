@@ -5,7 +5,7 @@ import Catalog from './components/Catalog';
 import Cart from './components/Cart';
 import CartPreview from './components/CartPreview';
 
-// import './App.css';
+import './App.css';
 
 class App extends Component {
   state = {
@@ -69,14 +69,14 @@ class App extends Component {
             inventory={this.state.inventory}
             onAddProductToCart={this.addItemToCart}
           />
+          <aside>
+            <CartPreview
+              items={this.state.cart}
+              onView={this.showCart}
+            />
+          </aside>
         </main>
-        <aside className="sidebar">
-          <CartPreview
-            items={this.state.cart}
-            onView={this.showCart}
-          />
-        </aside>
-        <div style={{ display: this.state.showCart ? 'inherit' : 'none' }}>
+        <div className={this.state.showCart ? 'modal' : 'modal hidden'}>
           <Cart
             items={this.state.cart}
             onClear={this.clearCart}
