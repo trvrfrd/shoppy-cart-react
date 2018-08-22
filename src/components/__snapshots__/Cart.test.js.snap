@@ -1,37 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UI and rendering matches snapshot 1`] = `
-<div>
-  <h1>
+<div
+  className="cart"
+>
+  <h1
+    className="headline"
+  >
     Your Cart
   </h1>
-  <table>
+  <table
+    className="table"
+  >
     <thead>
       <tr>
-        <th>
+        <th
+          className="call"
+        >
           Item
         </th>
-        <th>
+        <th
+          className="call"
+        >
           Price
         </th>
-        <th>
+        <th
+          className="call"
+        >
           Qty
         </th>
-        <th />
+        <th
+          className="call"
+        />
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>
+        <td
+          className="cell"
+        >
           A
         </td>
-        <td>
+        <td
+          className="cell"
+        >
           $1.00
         </td>
-        <td>
+        <td
+          className="cell"
+        >
           1
         </td>
-        <td>
+        <td
+          className="cell"
+        >
           <button
             data-test-name="remove-item"
             onClick={[Function]}
@@ -41,16 +63,24 @@ exports[`UI and rendering matches snapshot 1`] = `
         </td>
       </tr>
       <tr>
-        <td>
+        <td
+          className="cell"
+        >
           B
         </td>
-        <td>
+        <td
+          className="cell"
+        >
           $1.50
         </td>
-        <td>
+        <td
+          className="cell"
+        >
           2
         </td>
-        <td>
+        <td
+          className="cell"
+        >
           <button
             data-test-name="remove-item"
             onClick={[Function]}
@@ -60,16 +90,24 @@ exports[`UI and rendering matches snapshot 1`] = `
         </td>
       </tr>
       <tr>
-        <td>
+        <td
+          className="cell"
+        >
           C
         </td>
-        <td>
+        <td
+          className="cell"
+        >
           $2.00
         </td>
-        <td>
+        <td
+          className="cell"
+        >
           3
         </td>
-        <td>
+        <td
+          className="cell"
+        >
           <button
             data-test-name="remove-item"
             onClick={[Function]}
