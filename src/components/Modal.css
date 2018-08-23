@@ -1,0 +1,12 @@
+:local(.modal) {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 10;
+}

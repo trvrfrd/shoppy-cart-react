@@ -4,6 +4,7 @@ import { hot } from 'react-hot-loader';
 import Catalog from './components/Catalog';
 import Cart from './components/Cart';
 import CartPreview from './components/CartPreview';
+import Modal from './components/Modal';
 
 import './App.css';
 
@@ -76,14 +77,14 @@ class App extends Component {
             />
           </aside>
         </main>
-        <div className={this.state.showCart ? 'modal' : 'modal hidden'}>
+        <Modal show={this.state.showCart}>
           <Cart
             items={this.state.cart}
-            onClear={this.clearCart}
+            onClear={() => this.clearCart() || this.hideCart()}
             onRemoveItem={this.removeItemFromCartAt}
             onClose={this.hideCart}
           />
-        </div>
+        </Modal>
       </Fragment>
     )
   }
