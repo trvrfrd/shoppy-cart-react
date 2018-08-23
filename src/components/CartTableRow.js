@@ -13,7 +13,7 @@ export default function CartTableRow({
       <td className={styles.cell}>{formatUSD(price)}</td>
       <td className={styles.cell}>{quantity}</td>
       <td className={styles.cell}>
-        <button onClick={onRemoveItem} data-test-name='remove-item'>Remove</button>
+        <button className={styles.button} onClick={onRemoveItem} data-test-name='remove-item'>Remove</button>
       </td>
     </tr>
   );

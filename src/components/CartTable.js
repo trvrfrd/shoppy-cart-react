@@ -6,12 +6,12 @@ import styles from './CartTable.css';
 export default function CartTable({ items = [], onRemoveItem }) {
   return (
     <table className={styles.table}>
-      <thead>
+      <thead className={styles.header}>
         <tr>
-          <th className={styles.call}>Item</th>
-          <th className={styles.call}>Price</th>
-          <th className={styles.call}>Qty</th>
-          <th className={styles.call}></th>
+          <th className={styles.cell}>Item</th>
+          <th className={styles.cell}>Price</th>
+          <th className={styles.cell}>Qty</th>
+          <th className={styles.cell}></th>
         </tr>
       </thead>
       <tbody>

@@ -17,7 +17,7 @@ export default function Cart({ items = [], onClear, onClose, onRemoveItem }) {
           />
           <CartTotal items={items} />
         </Fragment>
-        : <p>Your cart is empty.</p>
+        : <p className={styles.emptyMessage}>Your cart is empty.</p>
       }
       <CartControls
         onClear={onClear}

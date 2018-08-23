@@ -1,12 +1,25 @@
 :local(.cart) {
+  background-color: #FBC02D;
+  border-bottom: 2px solid #F57F17;
+  border-radius: 5px;
+  border-right: 2px solid #F57F17;
+  color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-top: -10%;
-  min-height: 50%;
+  margin-top: -25%;
   min-width: 50%;
 }
 
 :local(.headline) {
+  background-color: #F9A825;
+  border-top-left-radius: 5px;
+  border-top: 5px solid #F57F17;
+  font-weight: 400;
+  padding: 10px 0;
   text-align: center;
+}
+
+:local(.emptyMessage) {
+  padding: 20px 10px;
+  padding-bottom: 10px;
 }

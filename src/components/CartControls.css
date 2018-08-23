@@ -1,0 +1,15 @@
+:local(.wrapper) {
+  padding: 5px;
+}
+
+:local(.button) {
+  background-color: #1E88E5;
+  border: none;
+  border-bottom: 2px solid #0D47A1;
+  border-radius: 5px;
+  border-right: 2px solid #0D47A1;
+  color: #fff;
+  font-size: 0.8em;
+  margin: 5px;
+  padding: 5px 20px;
+}

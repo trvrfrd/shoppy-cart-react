@@ -1,10 +1,35 @@
 :local(.table) {
   align-self: center;
-  text-align: left;
   min-height: 25%;
   min-width: 90%;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
 }
 
 :local(.cell) {
-  padding: 5px;
+  color: #fff;
+  font-weight: normal;
+  padding: 2px 0;
+}
+
+:local(.cell) {
+  border-bottom: 1px solid #fff;
+}
+
+:local(.cell:last-child) {
+  border: none;
+}
+
+:local(.button) {
+  background-color: #1E88E5;
+  border: none;
+  border-bottom: 2px solid #0D47A1;
+  border-radius: 5px;
+  border-right: 2px solid #0D47A1;
+  color: #fff;
+  font-size: 0.8em;
+  margin-right: -20px;
+  padding: 5px 10px;
+  text-align: center;
 }
