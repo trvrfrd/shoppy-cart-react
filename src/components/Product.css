@@ -1,20 +1,44 @@
 :local(.product) {
+  background-color: #FBC02D;
+  border-bottom: 2px solid #F57F17;
+  border-radius: 5px;
+  border-right: 2px solid #F57F17;
+  color: #fff;
   display: grid;
+  margin: 10px 0;
+  padding: 10px;
   grid-template-columns: 3fr 1fr 1fr;
 }
 
 :local(.name) {
+  font-size: 1.4em;
+  font-weight: normal;
   grid-row: 1 / 2;
   padding: 5px;
 }
 
 :local(.description) {
+  margin-bottom: 5px;
   order: 1;
   padding: 5px;
 }
 
 :local(.price) {
+  font-size: 1.1em;
   grid-row: 1 / 3;
+  margin-top: 5px;
   padding: 5px;
   text-align: center;
+}
+
+:local(.button) {
+  background-color: #1E88E5;
+  border: none;
+  border-bottom: 2px solid #0D47A1;
+  border-radius: 5px;
+  border-right: 2px solid #0D47A1;
+  color: #fff;
+  font-size: 0.8em;
+  position: relative;
+  top: 5px;
 }

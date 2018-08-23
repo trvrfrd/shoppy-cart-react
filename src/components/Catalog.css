@@ -1,7 +1,11 @@
 :local(.wrapper) {
-  margin-left: 80px;
+  background-color: #F9A825;
+  border-radius: 5px;
+  margin-left: 30px;
+  padding: 20px;
 }
 
 :local(.list) {
   list-style-type: none;
+  margin: -10px 0;
 }

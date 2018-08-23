@@ -6,7 +6,7 @@ export default function CartPreview({ items = [], onView }) {
   const totalCount = items.reduce((total, item) => total + item.quantity, 0);
   return (
     <div className={styles.wrapper}>
-      <button onClick={onView}>View Cart</button>
+      <button className={styles.button} onClick={onView}>View Cart</button>
       <p>({totalCount} items)</p>
     </div>
   )

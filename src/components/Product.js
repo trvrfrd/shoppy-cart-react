@@ -17,8 +17,8 @@ export default function Product({ product, onAddToCart }) {
       <p className={styles.price}>
         {formatUSD(product.price)}
       </p>
-      <button onClick={() => onAddToCart(product)}>
-        Add to cart
+      <button className={styles.button} onClick={() => onAddToCart(product)}>
+        Add to Cart
       </button>
     </article>
   )

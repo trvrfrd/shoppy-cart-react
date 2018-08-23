@@ -1,9 +1,26 @@
 :local(.wrapper) {
+  background-color: #1E88E5;
+  border-bottom: 2px solid #0D47A1;
+  border-radius: 5px;
+  border-right: 2px solid #0D47A1;
+  color: #fff;
   display: flex;
   flex-direction: column;
+  height: 95px;
   justify-content: center;
+  padding: 20px;
   position: sticky;
   text-align: center;
   top: 20px;
-  height: 80px;
+}
+
+:local(.button) {
+  background-color: #FBC02D;
+  border: none;
+  border-bottom: 2px solid #F57F17;
+  border-radius: 5px;
+  border-right: 2px solid #F57F17;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 5px 0;
 }
