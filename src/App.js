@@ -16,6 +16,11 @@ class App extends Component {
   }
 
   componentDidMount() {
+    document.addEventListener('keydown', e => {
+      // escape! close modal!
+      if (e.keyCode === 27) this.setState({ showCart: false });
+    });
+
     import('./inventory.json')
       .then(inventory => this.setState({ inventory: inventory.cakes }));
   }
