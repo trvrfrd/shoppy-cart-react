@@ -12,25 +12,27 @@ exports[`UI and rendering matches snapshot 1`] = `
   <table
     className="table"
   >
-    <thead>
+    <thead
+      className="header"
+    >
       <tr>
         <th
-          className="call"
+          className="cell"
         >
           Item
         </th>
         <th
-          className="call"
+          className="cell"
         >
           Price
         </th>
         <th
-          className="call"
+          className="cell"
         >
           Qty
         </th>
         <th
-          className="call"
+          className="cell"
         />
       </tr>
     </thead>
@@ -55,6 +57,7 @@ exports[`UI and rendering matches snapshot 1`] = `
           className="cell"
         >
           <button
+            className="button"
             data-test-name="remove-item"
             onClick={[Function]}
           >
@@ -82,6 +85,7 @@ exports[`UI and rendering matches snapshot 1`] = `
           className="cell"
         >
           <button
+            className="button"
             data-test-name="remove-item"
             onClick={[Function]}
           >
@@ -109,6 +113,7 @@ exports[`UI and rendering matches snapshot 1`] = `
           className="cell"
         >
           <button
+            className="button"
             data-test-name="remove-item"
             onClick={[Function]}
           >
@@ -118,15 +123,23 @@ exports[`UI and rendering matches snapshot 1`] = `
       </tr>
     </tbody>
   </table>
-  <p>
+  <p
+    className="total"
+  >
     Total: 
     $10.00
   </p>
-  <div>
-    <button>
+  <div
+    className="wrapper"
+  >
+    <button
+      className="button"
+    >
       Clear
     </button>
-    <button>
+    <button
+      className="button"
+    >
       Close
     </button>
   </div>
