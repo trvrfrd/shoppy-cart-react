@@ -3,8 +3,6 @@ import { formatUSD, titleCase, capitalize } from '../utils';
 
 import styles from './Product.css';
 
-console.log(styles);
-
 export default function Product({ product, onAddToCart }) {
   return (
     <article className={styles.product}>
