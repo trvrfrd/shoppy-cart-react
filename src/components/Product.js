@@ -5,7 +5,10 @@ import styles from './Product.css';
 
 export default function Product({ product, onAddToCart }) {
   return (
-    <article className={styles.product}>
+    <article
+      className={styles.product}
+      data-test-name="product"
+    >
       <h2 className={styles.name}>
         {titleCase(product.type)}
       </h2>
@@ -15,7 +18,11 @@ export default function Product({ product, onAddToCart }) {
       <p className={styles.price}>
         {formatUSD(product.price)}
       </p>
-      <button className={styles.button} onClick={() => onAddToCart(product)}>
+      <button
+        className={styles.button}
+        onClick={() => onAddToCart(product)}
+        data-test-name="add-to-cart"
+      >
         Add to Cart
       </button>
     </article>

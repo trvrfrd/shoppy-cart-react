@@ -3,6 +3,7 @@
 exports[`UI and rendering matches snapshot 1`] = `
 <div
   className="cart"
+  data-test-name="cart"
 >
   <h1
     className="headline"
@@ -134,11 +135,13 @@ exports[`UI and rendering matches snapshot 1`] = `
   >
     <button
       className="button"
+      data-test-name="clear-cart"
     >
       Clear
     </button>
     <button
       className="button"
+      data-test-name="close-cart"
     >
       Close
     </button>

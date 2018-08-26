@@ -7,7 +7,10 @@ import styles from './Cart.css';
 
 export default function Cart({ items = [], onClear, onClose, onRemoveItem }) {
   return (
-    <div className={styles.cart}>
+    <div
+      className={styles.cart}
+      data-test-name="cart"
+    >
       <h1 className={styles.headline}>Your Cart</h1>
       {items.length ?
         <Fragment>
