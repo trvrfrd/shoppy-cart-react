@@ -42,7 +42,7 @@ exports[`UI and rendering matches snapshot 1`] = `
         <td
           className="cell"
         >
-          A
+          Product A
         </td>
         <td
           className="cell"
@@ -70,7 +70,7 @@ exports[`UI and rendering matches snapshot 1`] = `
         <td
           className="cell"
         >
-          B
+          Product B
         </td>
         <td
           className="cell"
@@ -98,7 +98,7 @@ exports[`UI and rendering matches snapshot 1`] = `
         <td
           className="cell"
         >
-          C
+          Product C
         </td>
         <td
           className="cell"
