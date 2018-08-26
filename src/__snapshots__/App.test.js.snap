@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Array [
+  <header>
+    <h1>
+      Let Them Eat Cake
+    </h1>
+  </header>,
+  <main>
+    <div
+      className="wrapper"
+    >
+      <ul
+        className="list"
+      >
+        <li>
+          <article
+            className="product"
+            data-test-name="product"
+          >
+            <h2
+              className="name"
+            >
+              Product A
+            </h2>
+            <p
+              className="description"
+            >
+              Amazing product
+            </p>
+            <p
+              className="price"
+            >
+              $1.00
+            </p>
+            <button
+              className="button"
+              data-test-name="add-to-cart"
+              onClick={[Function]}
+            >
+              Add to Cart
+            </button>
+          </article>
+        </li>
+        <li>
+          <article
+            className="product"
+            data-test-name="product"
+          >
+            <h2
+              className="name"
+            >
+              Product B
+            </h2>
+            <p
+              className="description"
+            >
+              Beautiful product
+            </p>
+            <p
+              className="price"
+            >
+              $1.50
+            </p>
+            <button
+              className="button"
+              data-test-name="add-to-cart"
+              onClick={[Function]}
+            >
+              Add to Cart
+            </button>
+          </article>
+        </li>
+        <li>
+          <article
+            className="product"
+            data-test-name="product"
+          >
+            <h2
+              className="name"
+            >
+              Product C
+            </h2>
+            <p
+              className="description"
+            >
+              I love this product more than i love my wife
+            </p>
+            <p
+              className="price"
+            >
+              $2.00
+            </p>
+            <button
+              className="button"
+              data-test-name="add-to-cart"
+              onClick={[Function]}
+            >
+              Add to Cart
+            </button>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <aside>
+      <div
+        className="wrapper"
+        data-test-name="cart-preview"
+      >
+        <button
+          className="button"
+          data-test-name="view-cart"
+          onClick={[Function]}
+        >
+          View Cart
+        </button>
+        <p>
+          (
+          0
+           items)
+        </p>
+      </div>
+    </aside>
+  </main>,
+]
+`;

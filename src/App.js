@@ -15,14 +15,19 @@ class App extends Component {
     showCart: false
   }
 
+  static defaultProps = {
+    loadInventory: () => import('./inventory.json')
+  }
+
   componentDidMount() {
     document.addEventListener('keydown', e => {
       // escape! close modal!
       if (e.keyCode === 27) this.setState({ showCart: false });
     });
 
-    import('./inventory.json')
-      .then(inventory => this.setState({ inventory: inventory.cakes }));
+    this.props.loadInventory()
+      .then(inventory => this.setState({ inventory: inventory.cakes }))
+      .catch(e => console.error(e));
   }
 
   addItemToCart = newItem => {
@@ -52,16 +57,6 @@ class App extends Component {
 
   showCart = () => this.setState({ showCart: true });
   hideCart = () => this.setState({ showCart: false });
-
-  addRandomItem = () => {
-    const letters = 'abcdefghijklmnopqrstuvwxyz';
-    const randomChar = letters[Math.floor(Math.random() * 26)];
-    const item = {
-      type: randomChar,
-      price: Number((Math.random() * 10).toFixed(2))
-    }
-    this.addItemToCart(item);
-  }
 
   render() {
     return (
