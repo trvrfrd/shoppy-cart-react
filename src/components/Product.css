@@ -1,9 +1,9 @@
 :local(.product) {
-  background-color: #FBC02D;
-  border-bottom: 2px solid #F57F17;
+  background-color: var(--primary-700);
+  border-bottom: 2px solid var(--primary-900);
   border-radius: 5px;
-  border-right: 2px solid #F57F17;
-  color: #fff;
+  border-right: 2px solid var(--primary-900);
+  color: var(--white);
   display: grid;
   margin: 10px 0;
   padding: 10px;
@@ -32,12 +32,12 @@
 }
 
 :local(.button) {
-  background-color: #1E88E5;
+  background-color: var(--accent-600);
   border: none;
-  border-bottom: 2px solid #0D47A1;
+  border-bottom: 2px solid var(--accent-900);
   border-radius: 5px;
-  border-right: 2px solid #0D47A1;
-  color: #fff;
+  border-right: 2px solid var(--accent-900);
+  color: var(--white);
   font-size: 0.8em;
   position: relative;
   top: 5px;

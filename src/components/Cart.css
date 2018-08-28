@@ -1,9 +1,9 @@
 :local(.cart) {
-  background-color: #FBC02D;
-  border-bottom: 2px solid #F57F17;
+  background-color: var(--primary-700);
+  border-bottom: 2px solid var(--primary-900);
   border-radius: 5px;
-  border-right: 2px solid #F57F17;
-  color: #fff;
+  border-right: 2px solid var(--primary-900);
+  color: var(--white);
   display: flex;
   flex-direction: column;
   margin-top: -25%;
@@ -11,9 +11,9 @@
 }
 
 :local(.headline) {
-  background-color: #F9A825;
+  background-color: var(--primary-800);
   border-top-left-radius: 5px;
-  border-top: 5px solid #F57F17;
+  border-top: 5px solid var(--primary-900);
   font-weight: 400;
   padding: 10px 0;
   text-align: center;

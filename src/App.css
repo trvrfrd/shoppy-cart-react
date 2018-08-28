@@ -1,3 +1,16 @@
+:root {
+  --primary-700: #FBC02D;
+  --primary-800: #F9A825;
+  --primary-900: #F57F17;
+
+  --accent-600: #1E88E5;
+  --accent-900: #0D47A1;
+
+  --gray-200: #eee;
+
+  --white: #fff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,15 +25,15 @@ body {
 }
 
 #app {
-  border: 2px solid #eee;
+  border: 2px solid var(--gray-200);
   width: 1000px;
 }
 
 header {
   align-items: center;
-  background-color: #F9A825;
-  border-top: 15px solid #F57F17;
-  color: #fff;
+  background-color: var(--primary-800);
+  border-top: 15px solid var(--primary-900);
+  color: var(--white);
   display: flex;
   height: 100px;
   justify-content: center;

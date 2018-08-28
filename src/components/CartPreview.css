@@ -1,9 +1,9 @@
 :local(.wrapper) {
-  background-color: #1E88E5;
-  border-bottom: 2px solid #0D47A1;
+  background-color: var(--accent-600);
+  border-bottom: 2px solid var(--accent-900);
   border-radius: 5px;
-  border-right: 2px solid #0D47A1;
-  color: #fff;
+  border-right: 2px solid var(--accent-900);
+  color: var(--white);
   display: flex;
   flex-direction: column;
   height: 95px;
@@ -15,12 +15,12 @@
 }
 
 :local(.button) {
-  background-color: #FBC02D;
+  background-color: var(--primary-700);
   border: none;
-  border-bottom: 2px solid #F57F17;
+  border-bottom: 2px solid var(--primary-900);
   border-radius: 5px;
-  border-right: 2px solid #F57F17;
-  color: #fff;
+  border-right: 2px solid var(--primary-900);
+  color: var(--white);
   font-size: 0.8em;
   padding: 5px 0;
 }

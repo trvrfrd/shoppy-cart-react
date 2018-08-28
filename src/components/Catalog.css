@@ -1,5 +1,5 @@
 :local(.wrapper) {
-  background-color: #F9A825;
+  background-color: var(--primary-800);
   border-radius: 5px;
   margin-left: 30px;
   padding: 20px;
