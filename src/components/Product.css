@@ -32,7 +32,7 @@
 }
 
 :local(.button) {
-  background-color: var(--accent-600);
+  background-color: var(--accent-700);
   border: none;
   border-bottom: 2px solid var(--accent-900);
   border-radius: 5px;
