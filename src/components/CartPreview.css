@@ -15,12 +15,6 @@
 }
 
 :local(.button) {
-  background-color: var(--accent-700);
-  border: none;
-  border-bottom: 2px solid var(--accent-900);
-  border-radius: 5px;
-  border-right: 2px solid var(--accent-900);
-  color: var(--white);
-  font-size: 0.8em;
+  composes: button from "./button.css";
   padding: 5px 0;
 }
