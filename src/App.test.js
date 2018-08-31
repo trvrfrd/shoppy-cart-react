@@ -63,7 +63,7 @@ describe('scenarios', () => {
     addToCartButtons.at(0).simulate('click');
 
     const cartPreview = findByTestName(wrapper, 'cart-preview');
-    expect(cartPreview.text()).toMatch('1 items');
+    expect(cartPreview.text()).toMatch('1 item');
 
     const viewCart = findByTestName(wrapper, 'view-cart');
     viewCart.simulate('click');
@@ -102,7 +102,7 @@ describe('scenarios', () => {
     findByTestName(wrapper, 'add-to-cart').at(0).simulate('click');
 
     const cartPreview = findByTestName(wrapper, 'cart-preview')
-    expect(cartPreview.text()).toMatch('1 items');
+    expect(cartPreview.text()).toMatch('1 item');
 
     findByTestName(wrapper, 'view-cart').simulate('click');
 

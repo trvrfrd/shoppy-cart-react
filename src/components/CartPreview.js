@@ -4,6 +4,8 @@ import styles from './CartPreview.css';
 
 export default function CartPreview({ items = [], onView }) {
   const totalCount = items.reduce((total, item) => total + item.quantity, 0);
+  const word = totalCount === 1 ? 'item' : 'items';
+
   return (
     <div
       className={styles.wrapper}
@@ -16,7 +18,7 @@ export default function CartPreview({ items = [], onView }) {
       >
         View Cart
       </button>
-      <p>({totalCount} items)</p>
+      <p>({totalCount} {word})</p>
     </div>
   )
 }

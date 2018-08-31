@@ -21,6 +21,12 @@ it('displays total count of items in cart', () => {
   expect(wrapper.text()).toMatch(expected);
 });
 
+it('uses the singular "item" when passed one item', () => {
+  const wrapper = mount(<CartPreview items={[fakeItems[0]]} />);
+  expect(wrapper.text()).toMatch('1 item');
+  expect(wrapper.text()).not.toMatch('1 items');
+});
+
 it('shows count of 0 for an empty items list', () => {
   const wrapper = mount(<CartPreview items={[]} />);
   expect(wrapper.text()).toMatch('(0 items)');
