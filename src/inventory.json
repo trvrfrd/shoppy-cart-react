@@ -22,6 +22,54 @@
       "description": "Like most things in life, I only know what this is from The Simpsons.",
       "id": 4,
       "type": "lady baltimore cake",
+      "price": 2
+    },
+    {
+      "description": "The devil is real and he tells me to do things... and I feed him this cake I guess(?)",
+      "id": 5,
+      "type": "devil's food cake",
+      "price": 6.66
+    },
+    {
+      "description": "It's like a pound puppy. What if you don't take it home and it ends up euthanized? Do you want that on your conscience?",
+      "id": 6,
+      "type": "pound cake",
+      "price": 1.50
+    },
+    {
+      "description": "Demasiadas leches, en mi opinión.",
+      "id": 7,
+      "type": "torta de tres leches",
+      "price": 3.33
+    },
+    {
+      "description": "Jaffa Cakes are biscuit-sized cakes introduced by McVitie and Price in the UK in 1927 and named after Jaffa oranges. The most common form of Jaffa cakes are circular, 2 1⁄8 inches (54 mm) in diameter and have three layers: a Genoise sponge base, a layer of orange flavoured jam and a coating of chocolate.[1] Jaffa cakes are also available as bars or in small packs, and in larger and smaller sizes.[2] The original Jaffa Cakes come in packs of 12, 24 or 36.[3]\n\nBecause McVitie's did not trademark the name \"Jaffa Cakes\", other biscuit manufacturers and supermarkets have made similar products under the same name.[4] The product's classification as a cake or biscuit was part of a VAT tribunal in 1991, with the court finding in McVitie's favour that the Jaffa cake should be considered a cake for tax purposes.[5] In 2012 they were ranked the best selling cake or biscuit in the United Kingdom.[6]",
+      "id": 8,
+      "type": "jaffa cake",
+      "price": 1
+    },
+    {
+      "description": "Alright this one's a reach but c'mon I gotta lotta cakes here! C'mon!!!",
+      "id": 9,
+      "type": "pancake",
+      "price": 1
+    },
+    {
+      "description": "I don't have anything funny to say about this. It's just good cake!",
+      "id": 10,
+      "type": "red velvet cake",
+      "price": 1
+    },
+    {
+      "description": "David Lynch is overrated, but this is pretty tasty.",
+      "id": 11,
+      "type": "blue velvet cake",
+      "price": 1
+    },
+    {
+      "description": "and that little boy's smile cake (oops that's weird gotta go bye!!!!!!!)",
+      "id": 12,
+      "type": "black velvet cake",
       "price": 1
     }
   ]
