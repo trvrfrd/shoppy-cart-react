@@ -6,8 +6,7 @@
   color: var(--white);
   display: flex;
   flex-direction: column;
-  margin-top: -25%;
-  min-width: 50%;
+  width: 100%;
 }
 
 :local(.headline) {
@@ -22,4 +21,11 @@
 :local(.emptyMessage) {
   padding: 20px 10px;
   padding-bottom: 10px;
+}
+
+:local(@media screen and (min-width: 900px)) {
+  :local(.cart) {
+    min-width: 33%;
+    width: initial;
+  }
 }

@@ -9,12 +9,14 @@
 
 :local(.cell) {
   color: var(--white);
+  border-bottom: 1px solid var(--white);
   font-weight: normal;
   padding: 2px 0;
+  text-align: center;
 }
 
-:local(.cell) {
-  border-bottom: 1px solid var(--white);
+:local(.cell:first-child) {
+  text-align: left;
 }
 
 :local(.cell:last-child) {
@@ -23,7 +25,5 @@
 
 :local(.button) {
   composes: button from "./button.css";
-  margin-right: -20px;
-  padding: 5px 10px;
   text-align: center;
 }

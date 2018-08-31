@@ -25,16 +25,20 @@ body {
   font-family: Roboto;
   justify-content: center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #app {
-  width: 1000px;
+  /* make room for CartPreview */
+  /* (fixed to bottom of screen on mobile */
+  margin-bottom: 65px;
+  max-width: 900px;
 }
 
 header {
   align-items: center;
   background-color: var(--primary-800);
-  border-top: 15px solid var(--primary-900);
+  border-bottom: 15px solid var(--primary-900);
   color: var(--white);
   display: flex;
   height: 100px;
@@ -46,15 +50,28 @@ header h1 {
 }
 
 main {
-  border: 2px solid var(--gray-200);
-  border-top: none;
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: 1fr 150px;
   height: calc(100% - 100px);
-  padding: 20px 0;
 }
 
-aside {
-  margin-right: 30px;
+
+@media screen and (min-width: 900px) {
+  #app {
+    min-width: 900px;
+    margin-bottom: 20px;
+    max-width: 1200px;
+  }
+
+  main {
+    border: 2px solid var(--gray-200);
+    border-top: none;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr auto;
+    padding: 20px 30px;
+  }
+
+  header {
+    border-top: 15px solid var(--primary-900);
+    border-bottom: none;
+  }
 }

@@ -1,11 +1,16 @@
 :local(.wrapper) {
   background-color: var(--primary-800);
-  border-radius: 5px;
-  margin-left: 30px;
-  padding: 20px;
+  padding: 5px;
 }
 
 :local(.list) {
   list-style-type: none;
   margin: -10px 0;
+}
+
+:local(@media screen and (min-width: 900px)) {
+  :local(.wrapper) {
+    border-radius: 5px;
+    padding: 20px;
+  }
 }

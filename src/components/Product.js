@@ -18,13 +18,15 @@ export default function Product({ product, onAddToCart }) {
       <p className={styles.price}>
         {formatUSD(product.price)}
       </p>
-      <button
-        className={styles.button}
-        onClick={() => onAddToCart(product)}
-        data-test-name="add-to-cart"
-      >
-        Add to Cart
-      </button>
+      <div className={styles.buttonWrapper}>
+        <button
+          className={styles.button}
+          onClick={() => onAddToCart(product)}
+          data-test-name="add-to-cart"
+        >
+          Add to Cart
+        </button>
+      </div>
     </article>
   )
 }

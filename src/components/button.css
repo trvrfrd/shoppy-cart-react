@@ -6,4 +6,5 @@
   border-right: 2px solid var(--accent-900);
   color: var(--white);
   font-size: 0.8em;
+  padding: 5px 15px;
 }
