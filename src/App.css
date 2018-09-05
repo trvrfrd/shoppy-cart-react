@@ -22,7 +22,7 @@
 
 body {
   display: flex;
-  font-family: Roboto;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   justify-content: center;
   min-height: 100vh;
   overflow-x: hidden;
