@@ -2,7 +2,8 @@
   align-self: center;
   min-height: 25%;
   min-width: 90%;
-  padding: 10px;
+  padding: 5px;
+  padding-right: 0;
   text-align: left;
   width: 100%;
 }
@@ -17,13 +18,29 @@
 
 :local(.cell:first-child) {
   text-align: left;
+  padding-left: 0;
 }
 
 :local(.cell:last-child) {
   border: none;
+  padding: 2px 0;
 }
 
 :local(.button) {
   composes: button from "./button.css";
-  text-align: center;
+  padding: 5px;
+}
+
+:local(@media screen and (min-width: 900px)) {
+  :local(.table) {
+    padding: 10px;
+  }
+
+  :local(.cell) {
+    padding: 2px 20px;
+  }
+
+  :local(.cell:last-child) {
+    padding-left: 10px;
+  }
 }

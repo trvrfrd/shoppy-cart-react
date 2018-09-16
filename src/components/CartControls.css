@@ -1,9 +1,11 @@
-:local(.wrapper) {
-  padding: 5px;
-}
-
 :local(.button) {
   composes: button from "./button.css";
   margin: 5px;
   padding: 5px 20px;
+}
+
+:local(@media screen and (min-width: 900px)) {
+  :local(.wrapper) {
+    padding: 5px;
+  }
 }
