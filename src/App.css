@@ -26,7 +26,6 @@ body {
   display: flex;
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   justify-content: center;
-  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -35,6 +34,8 @@ body {
   /* (fixed to bottom of screen on mobile */
   margin-bottom: 65px;
   max-width: 900px;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 header {
